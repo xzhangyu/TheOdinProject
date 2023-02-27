@@ -1,0 +1,83 @@
+<!-- This exercise practice the basic form controls and attributes,
+It corresponds to the section of Form Basics, 
+above the Using Form Controls Outside of Forms -->
+
+<!-- WHAT'S BEEN DONE -->
+<!-- HTML:
+    -Add label, id, and type
+    -Use select tag to create a dropdown menu
+    -Use disabled selected hidden to make the option disappear after selection
+    -Add placeholder 
+    -Change the container size to fit the placeholder with css whitespace and width
+    -Add name tag for the responded form object
+ -->
+
+ <!-- CSS:
+    -Use valid/invalid pseudo class
+    -Use required pseudo class
+    -Use placeholder pseudo class
+    -Add gradient with background-image: linear gradient property
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormPractice1</title>
+    <style>
+        input:invalid {
+            border: red solid 1px;
+        }
+
+        input:required:invalid {
+            background-image: linear-gradient(to right, blue, red)
+        }
+
+        input:valid {
+            border: green solid 1px;
+        }
+
+        input::placeholder {
+            color: red;
+        }
+
+        input::placeholder {
+            white-space: normal;
+        }
+
+        #gmail {
+            width: 12%;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate" name="birthDate" placeholder="YYYY-MM-DD" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected hidden>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="gmail">Gmail</label>
+        <input type="email" id="gmail" name="gmail" placeholder="Enter your email address" required>
+    </form>
+
+</body>
+
+</html>

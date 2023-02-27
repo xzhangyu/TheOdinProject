@@ -1,0 +1,121 @@
+<!-- Practice the rest of Form Basics -->
+
+<!--HTML
+    -Make a password, number, date type input
+    -Make a selection of different unis and two optgroups(one us uni one uk uni)
+    -Make a set of radio buttons of Majors and one of them checked
+    -Make a set of checkboxes of Joined Clubs
+    -Make a submit button, a reset button, and a general button
+    -Understand that the default button type is submit
+    -Make groups with fieldset and add names with legend
+    -Make an example case of specifying the intension of a set of radio buttons 
+    in the legend 
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormPractice2</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>User Information</legend>
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" name="userName" placeholder="Enter your name" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" </body>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" placeholder="Enter your birthdate" required>
+
+        <label for="university">University:</label>
+        <select id="university" name="university" required>
+            <optgroup label="U.S. Universities">
+                <option value="harvard">Harvard University</option>
+                <option value="yale">Yale University</option>
+                <option value="stanford">Stanford University</option>
+            </optgroup>
+            <optgroup label="U.K. Universities">
+                <option value="oxford">University of Oxford</option>
+                <option value="cambridge">University of Cambridge</option>
+                <option value="imperial">Imperial College London</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Major Information</legend>
+        <br><br><label for="major">Major:</label><br>
+        <input type="radio" id="graphic-design" name="major" value="graphic-design" checked required>
+        <label for="graphic-design">Graphic Design</label><br>
+        <input type="radio" id="fine-arts" name="major" value="fine-arts">
+        <label for="fine-arts">Fine Arts</label><br>
+        <input type="radio" id="photography" name="major" value="photography">
+        <label for="photography">Photography</label><br><br>
+
+        <input type="radio" id="web-design" name="major" value="web-design">
+        <label for="web-design">Web Design</label><br>
+        <input type="radio" id="animation" name="major" value="animation">
+        <label for="animation">Animation</label><br>
+        <input type="radio" id="game-design" name="major" value="game-design">
+        <label for="game-design">Game Design</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Clubs Information</legend>
+        <br><br><label for="joined-clubs">Joined Clubs:</label><br>
+        <input type="checkbox" id="programming-club" name="joined-clubs[]" value="programming-club">
+        <label for="programming-club">Programming Club</label><br>
+        <input type="checkbox" id="debate-club" name="joined-clubs[]" value="debate-club">
+        <label for="debate-club">Debate Club</label><br>
+        <input type="checkbox" id="creative-writing-club" name="joined-clubs[]" value="creative-writing-club">
+        <label for="creative-writing-club">Creative Writing Club</label><br>
+        <input type="checkbox" id="music-club" name="joined-clubs[]" value="music-club">
+        <label for="music-club">Music Club</label><br>
+        <input type="checkbox" id="theater-club" name="joined-clubs[]" value="theater-club">
+        <label for="theater-club">Theater Club</label><br>
+        <input type="checkbox" id="photography-club" name="joined-clubs[]" value="photography-club">
+        <label for="photography-club">Photography Club</label>
+
+        <br><br><label for="artunion-member">Are you an ArtUnion member?</label>
+        <input type="checkbox" id="artunion-member" name="artunion-member" value="yes">
+    </fieldset>
+    <fieldset>
+        <legend>Additional Information</legend>
+        <textarea rows="2" cols="6"></textarea>
+    </fieldset>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Click to Toggle</button>
+
+    <fieldset>
+        <legend>What would you like to drink?</legend>
+
+        <div>
+            <input type="radio" name="drink" id="coffee" value="coffee">
+            <label for="coffee">Coffee</label>
+        </div>
+
+        <div>
+            <input type="radio" name="drink" id="tea" value="tea">
+            <label for="tea">Tea</label>
+        </div>
+
+        <div>
+            <input type="radio" name="drink" id="soda" value="soda">
+            <label for="soda">Soda</label>
+        </div>
+
+    </fieldset>
+
+</html>
